@@ -4,7 +4,8 @@
 #
 # Find the sum of all the primes below two million.
 
-#TODO Runtime takes too long. Fix that
+
+# TODO Runtime takes too long. Fix that
 def is_prime_number(x):
     for y in range(2, x):
         if not (x % y):
