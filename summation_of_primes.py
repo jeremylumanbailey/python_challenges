@@ -5,22 +5,22 @@
 # Find the sum of all the primes below two million.
 
 
-# TODO Runtime takes too long. Fix that
-def is_prime_number(x):
-    for y in range(2, x):
-        if not (x % y):
+# TODO Works but runtime takes over a minute
+def is_prime_number(primeList,x):
+    for i in primeList:
+        if x % i == 0:
             return False
     return True
 
 
-sum = 2
-count = 1
+listSum = [2]
 prime_num = 3
+
 while True:
-    if is_prime_number(prime_num):
+    if is_prime_number(listSum, prime_num):
         if not prime_num < 2000000:
             break
-        print(prime_num)
-        sum = sum + prime_num
+        listSum.append(prime_num)
     prime_num = prime_num + 2
+sum = sum(listSum)
 print(sum)
